@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main>
+    <h1 aria-label="splitter">
+      <span aria-hidden="true">
+        <span>spli</span><br>
+        <span>tter</span>
+      </span>
+    </h1>
+
+    <div class="calculator">
+      <form data-form aria-labelledby="select">
+        <label for="bill">Bill</label>
+        <input step="0.001" data-bill type="number" name="bill" id="bill" required>
+
+        <h2 id="select" class="select">Select Tip %</h2>
+
+        <div class="tips">
+          <button type="button" data-tip class="btn btn--dark">5%</button>
+          <button type="button" data-tip class="btn btn--dark">10%</button>
+          <button type="button" data-tip class="btn btn--dark">15%</button>
+          <button type="button" data-tip class="btn btn--dark">25%</button>
+          <button type="button" data-tip class="btn btn--dark">50%</button>
+        </div>
+        <label for="custom">custom-tip</label>
+        <input data-custom-tip type="text" name="custom-tip" id="custom">
+
+        <label for="number">Number of people</label>
+        <input data-number min="1" type="number" name="number-of-people" id="number" required>
+
+        <button class="btn btn--dark" type="submit">Submit</button>
+      </form>
+
+      <div class="result">
+        <dl>
+         <div>
+            <dd>
+              Tip amount
+              <small>/ person</small>
+            </dd>
+            <dt data-tip-amount>
+              $0.00
+            </dt>
+         </div>
+         <div>
+            <dd>
+              Total
+              <small>/ person</small>
+            </dd>
+            <dt data-total-amount>
+              $0.00
+            </dt>
+         </div>
+        </dl>
+
+        <button data-reset class=" btn ">Reset</button>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
